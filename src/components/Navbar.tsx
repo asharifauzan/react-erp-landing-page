@@ -1,4 +1,5 @@
 import { BarChart2 } from "lucide-react";
+import { Link } from "react-router";
 
 function Navbar() {
   return (
@@ -22,7 +23,7 @@ function Navbar() {
               </li>
               <li>
                 <button className="font-semibold uppercase text-lg border-2 border-cyan-600 rounded-lg px-8 py-2">
-                  Login
+                  <Link to="/login">Login</Link>
                 </button>
               </li>
             </ul>
