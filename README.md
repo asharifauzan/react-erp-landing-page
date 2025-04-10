@@ -1,54 +1,32 @@
-# React + TypeScript + Vite
+# React AbERP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Introduction
 
-Currently, two official plugins are available:
+AbERP merupakan aplikasi ERP untuk mentransformasi dan mandigitalisasi kebutuhan bisnis anda.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Struktur
 
-## Expanding the ESLint configuration
+1. Landing Page (halaman utama)
+   Terdiri dari beberapa section, yaitu:
+   1. Hero/About (sebagai CTA)
+   2. Pricing Tier (menawarkan pilihan plan)
+   3. Contact (komunikasi dengan form email)
+2. Login Page (halaman login)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Analisa Kebutuhan Sistem
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Berdasarkan dari design yang diberikan yaitu terdapat dua halaman (landing page dan login page) dikarenakan jumlah page yang dibutuhkan tidak terlalu banyak maka diputuskan untuk **memakai React Vite tanpa menggunakan Nextjs supaya bundle size aplikasi lebih kecil**.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Digunakan juga **React Router sebagai router navigasi antar halaman**, **Tailwind dan ShadcnUI untuk pembuatan component yang lebih cepat** dan juga **Motion sebagai animasi element HTML**.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Selain itu menggunakan **Eslint dan Prettier untun menunjang proses development** serta **Vitest untuk library unit testing**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Tech Stacks
+
+1. React + Vite + Typescript
+2. React Router
+3. Tailwind + ShadcnUI
+4. Motion
+5. Eslint (linter)
+6. Prettier (formatter)
+7. Vitest (testing)
